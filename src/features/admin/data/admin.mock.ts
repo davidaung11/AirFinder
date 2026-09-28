@@ -1,0 +1,152 @@
+import type {
+  AdminPayment,
+  AdminProfessional,
+  AdminReview,
+  Complaint,
+  Verification,
+} from "../types/admin.types";
+export const adminProfessionals: AdminProfessional[] = [
+  {
+    id: "PRO-001",
+    name: "Somchai Air Service",
+    type: "Individual",
+    verification: "verified",
+    rating: 4.9,
+    leads: 18,
+    balance: 450,
+    complaints: 0,
+    status: "active",
+  },
+  {
+    id: "PRO-002",
+    name: "CoolFix Team Bangkok",
+    type: "Team",
+    verification: "pending",
+    rating: 4.8,
+    leads: 14,
+    balance: 300,
+    complaints: 1,
+    status: "pending",
+  },
+  {
+    id: "PRO-003",
+    name: "Bangkok Cooling Solutions",
+    type: "Company",
+    verification: "verified",
+    rating: 4.9,
+    leads: 31,
+    balance: 1250,
+    complaints: 0,
+    status: "active",
+  },
+  {
+    id: "PRO-004",
+    name: "QuickCool 24",
+    type: "Individual",
+    verification: "rejected",
+    rating: 3.2,
+    leads: 4,
+    balance: 0,
+    complaints: 3,
+    status: "suspended",
+  },
+];
+export const adminPayments: AdminPayment[] = [
+  {
+    id: "TX-2031",
+    professional: "Somchai Air Service",
+    type: "Top Up",
+    amount: 500,
+    status: "paid",
+    date: "28 Sep 2026",
+  },
+  {
+    id: "TX-2029",
+    professional: "Somchai Air Service",
+    type: "Lead Charge",
+    amount: -50,
+    status: "paid",
+    date: "28 Sep 2026",
+  },
+  {
+    id: "TX-2028",
+    professional: "CoolFix Team Bangkok",
+    type: "Top Up",
+    amount: 300,
+    status: "pending",
+    date: "28 Sep 2026",
+  },
+  {
+    id: "TX-2018",
+    professional: "QuickCool 24",
+    type: "Refund",
+    amount: 50,
+    status: "refunded",
+    date: "25 Sep 2026",
+  },
+];
+export const adminReviews: AdminReview[] = [
+  {
+    id: "REV-301",
+    customer: "Kanya S.",
+    professional: "Somchai Air Service",
+    rating: 5,
+    comment: "Clear communication and careful work.",
+    visible: true,
+    date: "24 Sep 2026",
+  },
+  {
+    id: "REV-299",
+    customer: "Nat P.",
+    professional: "QuickCool 24",
+    rating: 1,
+    comment: "Price quoted by phone changed after arrival.",
+    visible: true,
+    date: "22 Sep 2026",
+  },
+];
+export const adminComplaints: Complaint[] = [
+  {
+    id: "RPT-88",
+    reporter: "Nattapong",
+    professional: "QuickCool 24",
+    category: "Overcharging",
+    description:
+      "Final quote was substantially higher than the listed starting price.",
+    date: "27 Sep 2026",
+    status: "open",
+  },
+  {
+    id: "RPT-84",
+    reporter: "May",
+    professional: "CoolFix Team Bangkok",
+    category: "No Show",
+    description:
+      "Could not reach the professional after arranging a visit directly.",
+    date: "24 Sep 2026",
+    status: "under-review",
+  },
+];
+export const adminVerifications: Verification[] = [
+  {
+    id: "VER-119",
+    professional: "CoolFix Team Bangkok",
+    category: "Identity",
+    status: "pending",
+    submitted: "28 Sep 2026",
+  },
+  {
+    id: "VER-117",
+    professional: "Bangkok Cooling Solutions",
+    category: "Business",
+    status: "verified",
+    submitted: "26 Sep 2026",
+  },
+  {
+    id: "VER-112",
+    professional: "QuickCool 24",
+    category: "Certificate",
+    status: "rejected",
+    submitted: "20 Sep 2026",
+  },
+];
